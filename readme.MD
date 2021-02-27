@@ -8,3 +8,6 @@ Valósítsa meg az egész számokat tartalmazó verem típust! Ábrázolja a ver
 - [ ] Tele van-e a verem
 - [ ] Mi van a verem tetején
 - [ ] Kiíratás
+
+Segítség:
+https://www.techiedelight.com/stack-implementation-in-cpp/
