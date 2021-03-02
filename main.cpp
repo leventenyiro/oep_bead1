@@ -11,7 +11,9 @@ int main()
     st.push(10);
     //st.pop();
     //cout << st.pop() << endl;
-    st.toString();
+    //st.toString();
+    //cout << st.top << endl;
+    cout << st << endl;
 
     return 0;
 }

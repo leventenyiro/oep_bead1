@@ -7,9 +7,8 @@
 using namespace std;
 
 class Stack {
-    private:
-        int top;
     public:
+        int top;
         int arr[SIZE];
 
         Stack() {
@@ -45,15 +44,16 @@ class Stack {
         bool isEmpty() {
             return top == -1;
         }
-
-        void toString() {
-            if (isEmpty()) {
-                cout << "Stack is empty";
-            } else {
-                for (int n : arr) {
-                    cout << n << " ";
-                }
-            }
-            cout << endl;
-        }
+        
+    private:
+        friend std::ostream &operator<<(std::ostream &os, Stack &s);
 };
+
+inline std::ostream &operator<<(std::ostream& os, Stack &s) {
+    os << "Elements: ";
+    for (int i = 0; i < s.top; i++) {
+        os << s.arr[i] << " ";
+    }
+    os << s.arr[s.top];
+    return os;
+}
