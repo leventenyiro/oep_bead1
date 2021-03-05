@@ -27,9 +27,8 @@ bool Stack::isEmpty() const {
 
 ostream &operator<<(std::ostream& os, Stack &s) {
     os << "Elements: ";
-    for (int i = 0; i < s.top; i++) {
+    for (int i = s.top; i >= 0; i--) {
         os << s.arr[i] << " ";
     }
-    os << s.arr[s.top];
     return os;
 }

@@ -11,7 +11,7 @@ class Stack {
         Stack(int size) {
             top = -1;
             this->size = size;
-            *arr = arr[size];
+            arr = new int[size];
         }
 
         void push(int x);
@@ -27,7 +27,6 @@ class Stack {
             return top == -1;
         }*/
         friend std::ostream &operator<<(std::ostream &os, Stack &s);
-
         
     private:
         int top, size, *arr;
