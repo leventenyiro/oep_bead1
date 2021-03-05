@@ -18,7 +18,7 @@ int Stack::peek() {
 }
 
 bool Stack::isFull() const {
-    return top == SIZE - 1;
+    return top == size - 1;
 }
 
 bool Stack::isEmpty() const {

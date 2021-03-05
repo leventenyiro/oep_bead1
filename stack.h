@@ -1,18 +1,17 @@
 #pragma once
 
 #include <iostream>
-#define SIZE 100
 
 using namespace std;
-
-inline bool valid(int a) { return true }
 
 class Stack {
     public:
     enum Exception{ EMPTY_STACK, FULL_STACK };
 
-        Stack() {
+        Stack(int size) {
             top = -1;
+            this->size = size;
+            *arr = arr[size];
         }
 
         void push(int x);
@@ -31,6 +30,5 @@ class Stack {
 
         
     private:
-        int top;
-        int arr[SIZE];
+        int top, size, *arr;
 };

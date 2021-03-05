@@ -18,7 +18,7 @@ class Menu
         void peek();
         void isFull();
         void isEmpty();
+        void write();
         void test();
-        Stack st;
-
+        Stack st = Stack(100);
 };
