@@ -13,11 +13,11 @@ class Menu
         void run();
     private:
         int  getMenuPoint();
-        void putIn();
-        void removeMax();
-        void getMax();
-        void checkEmpty();
-        void write();
+        void push();
+        void pop();
+        void peek();
+        void isFull();
+        void isEmpty();
         void test();
         Stack st;
 

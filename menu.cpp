@@ -23,7 +23,7 @@ void Menu::run()
         v = getMenuPoint();
         switch(v){
             case 1:
-                putIn();
+                push();
                 write();
                 break;
             case 2:
@@ -74,27 +74,28 @@ int Menu::getMenuPoint()
     return v;
 }
 
-void Menu::putIn()
+void Menu::push()
 {
-    Item e;
+    int a;
     cout << "Mit tegyunk be?\n";
-    cin >> e;
-    st.push(e);
+    cin >> a;
+    st.push(a);
 }
 
-void Menu::removeMax()
+void Menu::pop()
 {
-    Item e;
-    bool hiba=false;
-    try{
-        e=pq.remMax();
-    }catch(PrQueue::PrQueueError err){
+    int a;
+    bool hiba = false;
+    /*try {
+        a = st.pop();
+    } catch(PrQueue::PrQueueError err) {
         hiba=true;
         if(err==PrQueue::EMPTY_PRQUEUE)
             cerr << "A kiveves nem sikerult! A pr.sor ures!\n";
         else
             cerr << "Programhiba, forduljon a program keszitojehez :-))\n";
-    }
+    }*/
+    
     if(!hiba) cout << "Kivett elem:\n" << e << endl;
 }
 
