@@ -70,10 +70,10 @@ int Menu::getMenuPoint() {
 
 void Menu::push() {
     try {
-        int a;
-        cout << "Mit tegyunk be?\n";
-        cin >> a;
-        st.push(a);
+        int x;
+        cout << "Mit tegyunk be? ";
+        cin >> x;
+        st.push(x);
     } catch (Stack::Exception err) {
         if (err == Stack::FULL_STACK)
             cerr << "A beteves nem sikerult! A verem tele van";
