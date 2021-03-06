@@ -52,9 +52,25 @@ TEST_CASE("1-et tartalmazo stack-be 2 rapakolasa", "[push]") {
 }
 
 TEST_CASE("felso elem kivevese", "[pop]") {
-    Stack s1 = Stack(10);
+    Stack s1(10);
     s1.push(1);
     CHECK(s1.pop() == 1);
+}
+
+TEST_CASE("teli stackbe nem lehet elemet rakni", "[push]") {
+    Stack s1(1);
+    s1.push(1);
+    CHECK_THROWS(s1.push(2));
+}
+
+TEST_CASE("ures stackbol kiveves", "[pop]") {
+    Stack s1(1);
+    CHECK_THROWS(s1.pop());
+}
+
+TEST_CASE("ures stackben lekerdezes", "[peek]") {
+    Stack s1(1);
+    CHECK_THROWS(s1.peek());
 }
 
 TEST_CASE("isEmpty", "[isEmpty]") {
