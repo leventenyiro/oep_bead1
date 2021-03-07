@@ -19,13 +19,6 @@ class Stack {
         int peek();
         bool isFull() const;
         bool isEmpty() const;
-        /*bool isFull() {
-            return top == SIZE - 1;
-        }
-
-        bool isEmpty() {
-            return top == -1;
-        }*/
         friend std::ostream &operator<<(std::ostream &os, Stack &s);
         
     private:

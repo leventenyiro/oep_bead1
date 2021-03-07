@@ -76,9 +76,9 @@ void Menu::push() {
         st.push(x);
     } catch (Stack::Exception err) {
         if (err == Stack::FULL_STACK)
-            cerr << "A beteves nem sikerult! A verem tele van";
+            cerr << "A beteves nem sikerult! A verem tele van" << endl;
         else
-            cerr << "Ismeretlen hiba!";
+            cerr << "Ismeretlen hiba!" << endl;
     }
 }
 
@@ -91,7 +91,8 @@ void Menu::pop() {
         if (err == Stack::EMPTY_STACK)
             cerr << "A kiveves nem sikerult! A verem ures!" << endl;
         else
-            cerr << "Ismeretlen hiba!";
+            cerr << "Ismeretlen hiba!" << endl;
+        error = true;
     }
     if (!error)
         cout << "Kivett elem: " << x << endl;
@@ -101,12 +102,13 @@ void Menu::peek() {
     int x;
     bool error = false;
     try {
-        x = st.pop();
+        x = st.peek();
     } catch (Stack::Exception err) {
         if (err == Stack::EMPTY_STACK)
             cerr << "A lekerdezes nem sikerult! A verem ures!" << endl;
         else
             cerr << "Ismeretlen hiba!";
+        error = true;
     }
     if (!error)
         cout << "A legfelso elem: " << x << endl;

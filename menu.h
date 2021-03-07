@@ -20,5 +20,5 @@ class Menu
         void isEmpty();
         void write();
         void test();
-        Stack st = Stack(100);
+        Stack st = Stack(5);
 };
