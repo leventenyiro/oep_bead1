@@ -68,11 +68,11 @@ int Menu::getMenuPoint() {
     return v;
 }
 
+bool checkPush(int a) { return a; }
+
 void Menu::push() {
     try {
-        int x;
-        cout << "Mit tegyunk be? ";
-        cin >> x;
+        int x = read<int>("Mit tegyunk be? ", "A szam egesz szam legyen!", checkPush);
         st.push(x);
     } catch (Stack::Exception err) {
         if (err == Stack::FULL_STACK)

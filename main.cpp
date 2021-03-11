@@ -11,7 +11,6 @@ int main()
 
     Menu test;
     test.run();
-    
 
     return 0;
 }
