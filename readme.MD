@@ -8,7 +8,7 @@ Valósítsa meg az egész számokat tartalmazó verem típust! Ábrázolja a ver
 - [x] Tele van-e a verem
 - [x] Mi van a verem tetején
 - [x] Kiíratás
-- [ ] Menu
+- [x] Menu
 
 Segítség:
 https://www.techiedelight.com/stack-implementation-in-cpp/
