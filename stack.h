@@ -20,6 +20,10 @@ class Stack {
         bool isFull() const;
         bool isEmpty() const;
         friend std::ostream &operator<<(std::ostream &os, Stack &s);
+
+        ~Stack() {
+            delete arr;
+        }
         
     private:
         int top, size, *arr;
